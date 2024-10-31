@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleskayit.css">
+
+    <title>Giriş Yap/Kayıt Ol</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form method="post">
+                <h1>Hesap Oluştur</h1>
+                <div class="social-icons">
+</div>
+                <span>lütfen isim, doğum tarihi gibi bilgileri doğru girin</span>
+                <input type="text" placeholder="İsim Soyisim"  id=username>
+                <input type="date" placeholder="Doğum Tarihi"  id=“birthday”>
+                <input type="email" placeholder="Email" id="email">
+                <input type="password" placeholder="Şifre" id="password">
+
+                <button>Üye OL</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="loginForm" method="post">
+                <h1>Giriş Yap</h1>
+                <div class="social-icons"></div>
+
+                <span>Siteye bir adım uzaklıktasın</span>
+                <input type="email" placeholder="Email" id="email">
+                <input type="password" placeholder="Şifre" id="password">
+                <a href="#">Şifremi Unuttum?</a>
+                <button>Giriş</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Hoşgeldiniz!</h1>
+                    <p>Zaten Üye misiniz? Giriş Yapın</p>
+                    <button class="hidden" id="login">Giriş Yap</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Merhaba!</h1>
+                    <p>Kişisel Programınıza Erişmek İçin Üye Olun</p>
+                    <button class="hidden" id="register">Üye Ol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
