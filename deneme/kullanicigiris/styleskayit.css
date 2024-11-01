@@ -9,7 +9,7 @@
 body{
     background-color: #679191;
     background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url(/deneme/image/arkaplan.jpeg);
+    url(../image/arkaplan.jpeg);
     display: flex;
     align-items: center;
     justify-content: center;

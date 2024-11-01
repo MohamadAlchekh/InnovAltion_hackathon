@@ -50,12 +50,17 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 50px; 
     background-color: #00000073;
     padding: 10px;
     display: flex;
     justify-content: center;
     gap: 20px;
+    box-sizing: border-box;
+    z-index: 1000; 
 }
 
 .nav-link {
@@ -69,16 +74,26 @@ body {
     text-decoration: underline;
 }
 
-/* Nasıl Kullanılır bilgi kartı */
+.page-title {
+    position: absolute; /* Konteyner içinde yerleşimi için */
+    top: 80px; /* Konteynerin üst kısmından 20px aşağıda yerleştirir */
+    left: center; /* Soldan 0px mesafede */
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    color: rgb(65, 74, 67);
+}
+
+
 .how-to-use-card {
-    display: none; /* Başlangıçta görünmez */
-    position: absolute; /* Kartın konumlandırılması */
+    display: none; 
+    position: absolute; 
     background-color: white;
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Kartın üstte görünmesi için */
-    top: 40px; /* Nasıl Kullanılır yazısının altına yerleştirmek için ayarlayın */
-    left: 550px; /* Sol kenardan hizalama */
-    margin-top: 5px; /* Kart ile yazı arasında biraz boşluk bırakmak için */
+    z-index: 1000; 
+    top: 40px; 
+    left: 400px; 
+    margin-top: 5px; 
 }
