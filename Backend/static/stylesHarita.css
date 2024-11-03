@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+.info-card {
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+}
+
+.info-card.active {
+    display: block;
+}
+
+.step-button {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.step-button:hover {
+    transform: scale(1.1);
+}
+
+.roadmap-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 80%;
+    max-width: 800px;
+    line-height: 1.6;
+    text-align: left;
+} */
+/* ---------------------------- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    min-height: 100vh;
+     background: url('../static/image/yolharitasi.png') no-repeat; 
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.button {
+    position: absolute;
+    width: 50px;
+    background-color: #000000bb;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3B6A55;
+}
+
+.info-card {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.button:hover + .info-card,
+.info-card:hover {
+    display: block;
+    transform: translateY(-80px);
+    opacity: 1;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 50px; 
+    background-color: #00000073;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+    z-index: 1000; 
+}
+
+.nav-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.page-title {
+    position: absolute; /* Konteyner içinde yerleşimi için */
+    top: 80px; /* Konteynerin üst kısmından 20px aşağıda yerleştirir */
+    left: center; /* Soldan 0px mesafede */
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    color: rgb(65, 74, 67);
+}
+
+
+.how-to-use-card {
+    display: none; 
+    position: absolute; 
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    top: 40px; 
+    left: 400px; 
+    margin-top: 5px; 
+}
