@@ -2,12 +2,9 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 import mysql.connector
 from mysql.connector import Error
 from werkzeug.security import generate_password_hash
-import re
 import os
 import google.generativeai as genai
 import mysql.connector
-import logging
-
 
 app = Flask(__name__)
     
@@ -102,12 +99,12 @@ def generate_roadmap():
         prompt = f"""Lütfen {field} için Yazılım alanlarında çoğu kişi yazılım nasıl öğreneceğini ve nasıl bir yol takip etmesi gerektiğini bilmemektedir. Bu bot kullanıcıya yol haritası çizip, en fazla üç detay yazıp kaynakları da vermeli. kaynaklar : youtube videoları, makaleler, kurslar olabilir. her harita için 5 ana başlık verilmelidir.\nLütfen verilen alan için bir öğrenme yol haritası oluştur.\n       başlık cumlesi olmadan adımlara başla, örneğin \"veri yapıları nasıl ögrenebilirim?\" diye sorduğum zaman \"İşte veri yapıları için bir öğrenme yol haritası:\" gibi bir cümle olmayacak, hemen şu şekilde \"1. **Temel Kavramlar:** vs vs\" olacak.\n        Tam olarak 5 adım olacak şekilde, numaralı liste formatında yanıt ver.\n        Her adım için:\n        - Kısa ama açıklayıcı bir başlık\n        - Bir veya iki cümlelik açıklama\n        - Öğrenme için bir kaynak önerisi (tercihen Türkçe)\n        \n        Örnek format:\n        1. [Başlık]: [Kısa açıklama]. Kaynak: [link/kaynak önerisi]\n        \n        Yanıtını Türkçe olarak ver.\n         kaynaklar ingilizce veya türkçe de olabilir."""
 
         response = chat_session.send_message(prompt)
-        print(f"Generated response: {response.text}")  # Debug print
+        print(f"Generated response: {response.text}")  
 
         # Return the generated roadmap as JSON
         return jsonify({'roadmap': response.text})
     except Exception as e:
-        print(f"Error in generate_roadmap: {str(e)}")  # Debug print
+        print(f"Error in generate_roadmap: {str(e)}")  
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
