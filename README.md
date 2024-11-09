@@ -1,10 +1,16 @@
 # InnovAltion_hackathon
 <h1 align="center">HARITAI</h1>
 
-
 ## Proje Genel Bakış
 
 HARITAI, yazılım alanında gelişmek isteyen veya yeni başlayan bireyler için tasarlanmış bir web uygulamasıdır. Platform, kullanıcıların öğrenme stillerine—görsel veya işitsel—göre yapay zeka (Gemini API) kullanarak kişiselleştirilmiş öğrenme yol haritaları oluşturur. HARITAI ayrıca kullanıcı kaydı ve giriş işlemleri için fonksiyonlar da içermektedir.
+
+![HARITAI](Backend/static/image/ad.png)
+
+## Project Demo
+
+https://github.com/user-attachments/assets/71795762-17b1-4e9d-b978-5336ed7d98ad
+
 
 ## Özellikler
 
